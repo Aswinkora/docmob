@@ -228,8 +228,7 @@ class TaskCard extends StatelessWidget {
               padding: const EdgeInsets.only(left: 60),
               child: Text(title,style: TextStyle(fontWeight: FontWeight.bold),),
             ),
-            // subtitle: Text("$taskCount Tasks"),
-            // trailing: Icon(Icons.more_vert),
+            
           ),
         ),
       ),
