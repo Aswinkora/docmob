@@ -34,7 +34,7 @@ class _TabsState extends State<Tabs> with SingleTickerProviderStateMixin {
         controller: tabController,
         children: [
           Dashboard(),
-          Appointments(),
+          Appoint(),
           TaskHomePage(),
         ],
       ),
