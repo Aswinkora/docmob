@@ -71,19 +71,6 @@
 import 'package:docmob/const/colors.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: TaskHomePage(),
-    );
-  }
-}
-
 class TaskHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

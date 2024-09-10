@@ -25,16 +25,34 @@ class _AppointState extends State<Appoint> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [Text('Alexander'), Text('MBBS')],
+          backgroundColor: primary,
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 7),
+          child: CircleAvatar(
+              backgroundColor: Colors.white,
+              child: Image.asset("images/midas_logo.png")),
         ),
-        backgroundColor: primary,
-        leadingWidth: 90,
-        leading: CircleAvatar(
-          backgroundColor: Colors.white,
-          child: Image.asset('images/midas.png'),
+        title: const Column(
+          children: [
+            Text("Alexander",
+                style: TextStyle(fontSize: 18, color: Colors.white)),
+            Padding(
+              padding: EdgeInsets.only(right: 45),
+              child: Text(
+                "MBBS",
+                style: TextStyle(fontSize: 14, color: Colors.white),
+              ),
+            )
+          ],
         ),
+        actions: [
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.notifications_sharp,
+                color: Colors.white,
+              ))
+        ],
       ),
       body: Column(
         children: [
@@ -83,8 +101,6 @@ class _AppointState extends State<Appoint> {
                             color: second,
                           ),
                           Text('${patien['name']}'),
-                          Text('age:${patien['age']}'),
-                          Text('time:${patien['time']}'),
                           Text(
                             'token no:${patien['token']}',
                             style: TextStyle(
