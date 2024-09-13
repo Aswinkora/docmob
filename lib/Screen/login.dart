@@ -1,4 +1,5 @@
 
+import 'package:docmob/Screen/tabs.dart';
 import 'package:docmob/components/textform.dart';
 import 'package:docmob/const/colors.dart';
 import 'package:flutter/material.dart';
@@ -182,10 +183,10 @@ class _DloginState extends State<Dlogin> {
                                 backgroundColor:
                                     WidgetStatePropertyAll(Color(0xFF293991))),
                             onPressed: () {
-                              // Navigator.push(
-                              //     context,
-                              //     MaterialPageRoute(
-                              //         builder: (context) => Dashboard()));
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Tabs(user: '',)));
                             },
                             child: Text(
                               "LOGIN",

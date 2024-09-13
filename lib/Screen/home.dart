@@ -1,3 +1,5 @@
+import 'package:docmob/Screen/Reports.dart';
+import 'package:docmob/Screen/appoint.dart';
 import 'package:docmob/const/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -160,7 +162,7 @@ class _DashboardState extends State<Dashboard> {
                     icon: Icons.calendar_today,
                     color: primary,
                     onTap: () {
-                      // Navigate to Appointments page
+                     Navigator.push(context, MaterialPageRoute(builder: (context)=>Appoint()));
                     },
                   ),
                   DashboardCard(
@@ -168,7 +170,7 @@ class _DashboardState extends State<Dashboard> {
                     icon: Icons.beach_access,
                     color: second,
                     onTap: () {
-                      // Navigate to Doctor Leave page
+                     
                     },
                   ),
                 ],
@@ -184,15 +186,15 @@ class _DashboardState extends State<Dashboard> {
                     icon: Icons.insert_chart,
                     color: Colors.orange,
                     onTap: () {
-                      // Navigate to Reports page
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ReportsPage()));
                     },
                   ),
                   DashboardCard(
-                    title: "Settings",
-                    icon: Icons.settings,
+                    title: "EMR",
+                    icon: Icons.local_hospital,
                     color: Colors.teal,
                     onTap: () {
-                      // Navigate to Settings page
+                  
                     },
                   ),
                 ],

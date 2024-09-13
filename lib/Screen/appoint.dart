@@ -26,9 +26,33 @@ class _AppointState extends State<Appoint> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: primary,
-        leading: CircleAvatar(
-          child: Image.asset('images/midas.png'),
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 7),
+          child: CircleAvatar(
+              backgroundColor: Colors.white,
+              child: Image.asset("images/midas_logo.png")),
         ),
+        title: const Column(
+          children: [
+            Text("Alexander",
+                style: TextStyle(fontSize: 18, color: Colors.white)),
+            Padding(
+              padding: EdgeInsets.only(right: 45),
+              child: Text(
+                "MBBS",
+                style: TextStyle(fontSize: 14, color: Colors.white),
+              ),
+            )
+          ],
+        ),
+        actions: [
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.notifications_sharp,
+                color: Colors.white,
+              ))
+        ],
       ),
       body: Column(
         children: [

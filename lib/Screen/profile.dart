@@ -68,6 +68,7 @@
 
 
 
+import 'package:docmob/Screen/personal_details.dart';
 import 'package:docmob/const/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -164,8 +165,8 @@ class TaskHomePage extends StatelessWidget {
                   child: ListView(
                     children: [
                       TaskCard(
-                        icon: Icons.settings,
-                        title: "Settings",
+                        icon: Icons.logout,
+                        title: "Logout",
                         taskCount: 4,
                         color: Colors.blue,
                       ),
@@ -182,11 +183,16 @@ class TaskHomePage extends StatelessWidget {
                         color: Colors.blue,
                       ),
                     
-                      TaskCard(
-                        icon: Icons.person,
-                        title: "Personal datails",
-                        taskCount: 8,
-                        color: Colors.orange,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>DoctorProfilePage()));
+                        },
+                        child: TaskCard(
+                          icon: Icons.person,
+                          title: "Personal datails",
+                          taskCount: 8,
+                          color: Colors.orange,
+                        ),
                       ),
                     ],
                   ),
