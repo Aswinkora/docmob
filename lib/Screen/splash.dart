@@ -1,5 +1,4 @@
 import 'package:docmob/Screen/login.dart';
-import 'package:docmob/Screen/profile.dart';
 import 'package:docmob/const/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -19,7 +18,7 @@ class _SplashscreenState extends State<Splashscreen>
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
     Future.delayed(Duration(seconds: 3), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => Dlogin()));
+          context, MaterialPageRoute(builder: (context) =>Dlogin()));
     });
   }
 

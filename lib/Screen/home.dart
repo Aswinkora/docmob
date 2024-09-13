@@ -1,5 +1,6 @@
 import 'package:docmob/Screen/Reports.dart';
 import 'package:docmob/Screen/appoint.dart';
+import 'package:docmob/Screen/leave.dart';
 import 'package:docmob/const/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -69,7 +70,7 @@ class _DashboardState extends State<Dashboard> {
                       ),
                     ),
                     SizedBox(
-                      width: 20, 
+                      width: 20,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -170,7 +171,8 @@ class _DashboardState extends State<Dashboard> {
                     icon: Icons.beach_access,
                     color: second,
                     onTap: () {
-                     
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Leave()));
                     },
                   ),
                 ],
@@ -206,7 +208,6 @@ class _DashboardState extends State<Dashboard> {
     );
   }
 }
-
 
 class DashboardCard extends StatelessWidget {
   final String title;

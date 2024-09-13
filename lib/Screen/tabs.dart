@@ -4,9 +4,11 @@ import 'package:docmob/Screen/profile.dart';
 import 'package:flutter/material.dart';
 
 class Tabs extends StatefulWidget {
-  final String user;
+  // final String user;
 
-  const Tabs({super.key, required this.user});
+  const Tabs({
+    super.key,
+  });
 
   @override
   State<Tabs> createState() => _TabsState();
@@ -42,7 +44,8 @@ class _TabsState extends State<Tabs> with SingleTickerProviderStateMixin {
         height: 60,
         child: TabBar(
           controller: tabController,
-          indicatorSize: TabBarIndicatorSize.label, // Adjusts the indicator to fit the label
+          indicatorSize: TabBarIndicatorSize
+              .label, // Adjusts the indicator to fit the label
           labelStyle: TextStyle(
             fontSize: 11, // Font size for selected tab
             fontWeight: FontWeight.bold, // Optional: Bold text for selected tab
@@ -56,7 +59,7 @@ class _TabsState extends State<Tabs> with SingleTickerProviderStateMixin {
               text: 'DASHBOARD',
             ),
             Tab(
-              icon: Icon(Icons.local_offer, size: 23),
+              icon: Icon(Icons.calendar_today, size: 23),
               text: 'APPOINTMENTS',
             ),
             Tab(

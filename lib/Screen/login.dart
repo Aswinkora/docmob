@@ -1,4 +1,3 @@
-
 import 'package:docmob/Screen/tabs.dart';
 import 'package:docmob/components/textform.dart';
 import 'package:docmob/const/colors.dart';
@@ -16,7 +15,8 @@ class _DloginState extends State<Dlogin> {
   Widget build(BuildContext context) {
     TextEditingController usercntrl = TextEditingController();
     TextEditingController passcontrl = TextEditingController();
-    return Scaffold(backgroundColor: Colors.white,
+    return Scaffold(
+      backgroundColor: Colors.white,
       body: LayoutBuilder(
         builder: (context, constraints) {
           if (constraints.maxWidth > 600) {
@@ -69,28 +69,28 @@ class _DloginState extends State<Dlogin> {
                               ),
                               const SizedBox(height: 30),
                               ElevatedButton(
-                            style: ButtonStyle(
-                                shape: WidgetStatePropertyAll(
-                                    RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(13))),
-                                fixedSize:
-                                    WidgetStatePropertyAll(Size(1000, 50)),
-                                backgroundColor:
-                                    WidgetStatePropertyAll(Color(0xFF293991))),
-                            onPressed: () {
-                              // Navigator.push(
-                              //     context,
-                              //     MaterialPageRoute(
-                              //         builder: (context) => Dashboard()));
-                            },
-                            child: Text(
-                              "LOGIN",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20,
-                                  color: Colors.white),
-                            )),
+                                  style: ButtonStyle(
+                                      shape: WidgetStatePropertyAll(
+                                          RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(13))),
+                                      fixedSize: WidgetStatePropertyAll(
+                                          Size(1000, 50)),
+                                      backgroundColor: WidgetStatePropertyAll(
+                                          Color(0xFF293991))),
+                                  onPressed: () {
+                                    // Navigator.push(
+                                    //     context,
+                                    //     MaterialPageRoute(
+                                    //         builder: (context) => Dashboard()));
+                                  },
+                                  child: Text(
+                                    "LOGIN",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20,
+                                        color: Colors.white),
+                                  )),
                               const SizedBox(height: 30),
                               Row(
                                 mainAxisAlignment:
@@ -136,7 +136,8 @@ class _DloginState extends State<Dlogin> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Container(color: Colors.white,
+                        Container(
+                          color: Colors.white,
                           height: 330,
                           width: 330,
                           child: Image.asset("images/midass.png"),
@@ -155,7 +156,8 @@ class _DloginState extends State<Dlogin> {
                           Colors: Colors.white,
                           icons: Icons.person_2,
                           label: 'Username',
-                          controller: usercntrl, colors: const Color.fromARGB(122, 0, 0, 0),
+                          controller: usercntrl,
+                          colors: const Color.fromARGB(122, 0, 0, 0),
                         ),
                         const SizedBox(height: 20),
                         Textform(
@@ -165,12 +167,14 @@ class _DloginState extends State<Dlogin> {
                           label: 'Password',
                           controller: passcontrl,
                         ),
-                          const SizedBox(height: 20),
-
-                         Padding(
-                           padding: const EdgeInsets.only(left: 200),
-                           child: Text("Reset password",style: TextStyle(color: second),),
-                         ),
+                        const SizedBox(height: 20),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 200),
+                          child: Text(
+                            "Reset password",
+                            style: TextStyle(color: second),
+                          ),
+                        ),
                         const SizedBox(height: 20),
                         ElevatedButton(
                             style: ButtonStyle(
@@ -186,7 +190,7 @@ class _DloginState extends State<Dlogin> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Tabs(user: '',)));
+                                      builder: (context) => Tabs()));
                             },
                             child: Text(
                               "LOGIN",
