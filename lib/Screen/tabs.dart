@@ -47,7 +47,7 @@ class _TabsState extends State<Tabs> with SingleTickerProviderStateMixin {
           indicatorSize: TabBarIndicatorSize
               .label, // Adjusts the indicator to fit the label
           labelStyle: TextStyle(
-            fontSize: 11, // Font size for selected tab
+            fontSize: 11, 
             fontWeight: FontWeight.bold, // Optional: Bold text for selected tab
           ),
           unselectedLabelStyle: TextStyle(
