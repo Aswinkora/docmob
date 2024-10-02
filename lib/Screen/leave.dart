@@ -139,7 +139,7 @@ class _LeaveState extends State<Leave> {
                       ],
                     ),
                     SizedBox(
-                      height: 160,
+                      height: 170,
                       child: PieChart(
                         PieChartData(
                           sections: [
